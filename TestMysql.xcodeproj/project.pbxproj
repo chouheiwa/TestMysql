@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		027DB149222E04D00023487B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB148222E04D00023487B /* AppDelegate.swift */; };
+		027DB14B222E04D00023487B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB14A222E04D00023487B /* ViewController.swift */; };
+		027DB14E222E04D00023487B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027DB14C222E04D00023487B /* Main.storyboard */; };
+		027DB150222E04D10023487B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027DB14F222E04D10023487B /* Assets.xcassets */; };
+		027DB153222E04D10023487B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027DB151222E04D10023487B /* LaunchScreen.storyboard */; };
+		027DB1E7222E0E310023487B /* MysqlSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1E6222E0E310023487B /* MysqlSocket.swift */; };
+		027DB1EA222E4DE90023487B /* AuthParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1E9222E4DE90023487B /* AuthParser.swift */; };
+		027DB1EC222E4E420023487B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1EB222E4E420023487B /* Parser.swift */; };
+		027DB1EF222E54B70023487B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1EE222E54B70023487B /* Data.swift */; };
+		027DB1F2222E63680023487B /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F1222E63680023487B /* DataList.swift */; };
+		027DB1F4222E643D0023487B /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F3222E643C0023487B /* AuthModel.swift */; };
+		027DB1F6222E64790023487B /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F5222E64790023487B /* ModelProtocol.swift */; };
+		027DB1FD222FA2900023487B /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1FC222FA2900023487B /* DataReader.swift */; };
+		027DB2022231FBCA0023487B /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB2012231FBCA0023487B /* DataType.swift */; };
+		027DB20622322E8D0023487B /* SQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20522322E8D0023487B /* SQLError.swift */; };
+		027DB20822325AF70023487B /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20722325AF70023487B /* SessionState.swift */; };
+		027DB20B223266EF0023487B /* ServerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20A223266EF0023487B /* ServerVersion.swift */; };
+		E93B8674F1E62A033E25F0DF /* Pods_TestMysql.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277809E5FB5709EABB8DE13F /* Pods_TestMysql.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		027DB145222E04D00023487B /* TestMysql.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMysql.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		027DB148222E04D00023487B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		027DB14A222E04D00023487B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		027DB14D222E04D00023487B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		027DB14F222E04D10023487B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		027DB152222E04D10023487B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		027DB154222E04D10023487B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		027DB1E6222E0E310023487B /* MysqlSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MysqlSocket.swift; sourceTree = "<group>"; };
+		027DB1E9222E4DE90023487B /* AuthParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthParser.swift; sourceTree = "<group>"; };
+		027DB1EB222E4E420023487B /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		027DB1EE222E54B70023487B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		027DB1F1222E63680023487B /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
+		027DB1F3222E643C0023487B /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		027DB1F5222E64790023487B /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
+		027DB1FC222FA2900023487B /* DataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
+		027DB2012231FBCA0023487B /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
+		027DB20522322E8D0023487B /* SQLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLError.swift; sourceTree = "<group>"; };
+		027DB20722325AF70023487B /* SessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionState.swift; sourceTree = "<group>"; };
+		027DB20A223266EF0023487B /* ServerVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerVersion.swift; sourceTree = "<group>"; };
+		277809E5FB5709EABB8DE13F /* Pods_TestMysql.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMysql.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3C7DAC1B9286417BF631F29 /* Pods-TestMysql.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMysql.release.xcconfig"; path = "Target Support Files/Pods-TestMysql/Pods-TestMysql.release.xcconfig"; sourceTree = "<group>"; };
+		E7EEA5F5199D31CFF948E18A /* Pods-TestMysql.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMysql.debug.xcconfig"; path = "Target Support Files/Pods-TestMysql/Pods-TestMysql.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		027DB142222E04D00023487B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E93B8674F1E62A033E25F0DF /* Pods_TestMysql.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		027DB13C222E04D00023487B = {
+			isa = PBXGroup;
+			children = (
+				027DB147222E04D00023487B /* TestMysql */,
+				027DB146222E04D00023487B /* Products */,
+				8048D565E72326D00139385C /* Pods */,
+				947E31E5C9F87E7899341567 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		027DB146222E04D00023487B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				027DB145222E04D00023487B /* TestMysql.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		027DB147222E04D00023487B /* TestMysql */ = {
+			isa = PBXGroup;
+			children = (
+				027DB1E4222E0DE50023487B /* Source */,
+				027DB148222E04D00023487B /* AppDelegate.swift */,
+				027DB14A222E04D00023487B /* ViewController.swift */,
+				027DB14C222E04D00023487B /* Main.storyboard */,
+				027DB14F222E04D10023487B /* Assets.xcassets */,
+				027DB151222E04D10023487B /* LaunchScreen.storyboard */,
+				027DB154222E04D10023487B /* Info.plist */,
+			);
+			path = TestMysql;
+			sourceTree = "<group>";
+		};
+		027DB1E4222E0DE50023487B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				027DB20422322E720023487B /* Error */,
+				027DB1FB222FA2830023487B /* Reader */,
+				027DB1F0222E63520023487B /* Model */,
+				027DB1ED222E54A40023487B /* Extensions */,
+				027DB1E8222E4DCA0023487B /* Parser */,
+				027DB1E5222E0DF90023487B /* Socket */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		027DB1E5222E0DF90023487B /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				027DB1E6222E0E310023487B /* MysqlSocket.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		027DB1E8222E4DCA0023487B /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				027DB1EB222E4E420023487B /* Parser.swift */,
+				027DB1E9222E4DE90023487B /* AuthParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		027DB1ED222E54A40023487B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				027DB1EE222E54B70023487B /* Data.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		027DB1F0222E63520023487B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				027DB209223266C20023487B /* Auth */,
+				027DB1F5222E64790023487B /* ModelProtocol.swift */,
+				027DB1F1222E63680023487B /* DataList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		027DB1FB222FA2830023487B /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				027DB2012231FBCA0023487B /* DataType.swift */,
+				027DB20722325AF70023487B /* SessionState.swift */,
+				027DB1FC222FA2900023487B /* DataReader.swift */,
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
+		027DB20422322E720023487B /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				027DB20522322E8D0023487B /* SQLError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		027DB209223266C20023487B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				027DB1F3222E643C0023487B /* AuthModel.swift */,
+				027DB20A223266EF0023487B /* ServerVersion.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		8048D565E72326D00139385C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7EEA5F5199D31CFF948E18A /* Pods-TestMysql.debug.xcconfig */,
+				C3C7DAC1B9286417BF631F29 /* Pods-TestMysql.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		947E31E5C9F87E7899341567 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				277809E5FB5709EABB8DE13F /* Pods_TestMysql.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		027DB144222E04D00023487B /* TestMysql */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 027DB157222E04D10023487B /* Build configuration list for PBXNativeTarget "TestMysql" */;
+			buildPhases = (
+				8B9155592EC8703F2662F599 /* [CP] Check Pods Manifest.lock */,
+				027DB141222E04D00023487B /* Sources */,
+				027DB142222E04D00023487B /* Frameworks */,
+				027DB143222E04D00023487B /* Resources */,
+				2404935068D909904F491327 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestMysql;
+			productName = TestMysql;
+			productReference = 027DB145222E04D00023487B /* TestMysql.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		027DB13D222E04D00023487B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = chouheiwa;
+				TargetAttributes = {
+					027DB144222E04D00023487B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 027DB140222E04D00023487B /* Build configuration list for PBXProject "TestMysql" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 027DB13C222E04D00023487B;
+			productRefGroup = 027DB146222E04D00023487B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				027DB144222E04D00023487B /* TestMysql */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		027DB143222E04D00023487B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027DB153222E04D10023487B /* LaunchScreen.storyboard in Resources */,
+				027DB150222E04D10023487B /* Assets.xcassets in Resources */,
+				027DB14E222E04D00023487B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2404935068D909904F491327 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMysql/Pods-TestMysql-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftAsyncSocket/SwiftAsyncSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftAsyncSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestMysql/Pods-TestMysql-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B9155592EC8703F2662F599 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestMysql-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		027DB141222E04D00023487B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027DB14B222E04D00023487B /* ViewController.swift in Sources */,
+				027DB1EF222E54B70023487B /* Data.swift in Sources */,
+				027DB1F2222E63680023487B /* DataList.swift in Sources */,
+				027DB1EA222E4DE90023487B /* AuthParser.swift in Sources */,
+				027DB20622322E8D0023487B /* SQLError.swift in Sources */,
+				027DB1F6222E64790023487B /* ModelProtocol.swift in Sources */,
+				027DB1EC222E4E420023487B /* Parser.swift in Sources */,
+				027DB1FD222FA2900023487B /* DataReader.swift in Sources */,
+				027DB1F4222E643D0023487B /* AuthModel.swift in Sources */,
+				027DB20822325AF70023487B /* SessionState.swift in Sources */,
+				027DB149222E04D00023487B /* AppDelegate.swift in Sources */,
+				027DB20B223266EF0023487B /* ServerVersion.swift in Sources */,
+				027DB2022231FBCA0023487B /* DataType.swift in Sources */,
+				027DB1E7222E0E310023487B /* MysqlSocket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		027DB14C222E04D00023487B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				027DB14D222E04D00023487B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		027DB151222E04D10023487B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				027DB152222E04D10023487B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		027DB155222E04D10023487B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		027DB156222E04D10023487B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		027DB158222E04D10023487B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7EEA5F5199D31CFF948E18A /* Pods-TestMysql.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UNAYZPR4S;
+				INFOPLIST_FILE = TestMysql/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.chouheiwa.TestMysql;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		027DB159222E04D10023487B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3C7DAC1B9286417BF631F29 /* Pods-TestMysql.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UNAYZPR4S;
+				INFOPLIST_FILE = TestMysql/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.chouheiwa.TestMysql;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		027DB140222E04D00023487B /* Build configuration list for PBXProject "TestMysql" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				027DB155222E04D10023487B /* Debug */,
+				027DB156222E04D10023487B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		027DB157222E04D10023487B /* Build configuration list for PBXNativeTarget "TestMysql" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				027DB158222E04D10023487B /* Debug */,
+				027DB159222E04D10023487B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 027DB13D222E04D00023487B /* Project object */;
+}
