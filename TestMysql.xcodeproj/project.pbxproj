@@ -24,6 +24,9 @@
 		027DB20622322E8D0023487B /* SQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20522322E8D0023487B /* SQLError.swift */; };
 		027DB20822325AF70023487B /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20722325AF70023487B /* SessionState.swift */; };
 		027DB20B223266EF0023487B /* ServerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20A223266EF0023487B /* ServerVersion.swift */; };
+		027DB20E22326F920023487B /* ServerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20D22326F920023487B /* ServerSession.swift */; };
+		027DB210223271580023487B /* ServerCapabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20F223271580023487B /* ServerCapabilities.swift */; };
+		027DB21222349CE20023487B /* TranscationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB21122349CE20023487B /* TranscationState.swift */; };
 		E93B8674F1E62A033E25F0DF /* Pods_TestMysql.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277809E5FB5709EABB8DE13F /* Pods_TestMysql.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		027DB20522322E8D0023487B /* SQLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLError.swift; sourceTree = "<group>"; };
 		027DB20722325AF70023487B /* SessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionState.swift; sourceTree = "<group>"; };
 		027DB20A223266EF0023487B /* ServerVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerVersion.swift; sourceTree = "<group>"; };
+		027DB20D22326F920023487B /* ServerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSession.swift; sourceTree = "<group>"; };
+		027DB20F223271580023487B /* ServerCapabilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCapabilities.swift; sourceTree = "<group>"; };
+		027DB21122349CE20023487B /* TranscationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscationState.swift; sourceTree = "<group>"; };
 		277809E5FB5709EABB8DE13F /* Pods_TestMysql.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMysql.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C7DAC1B9286417BF631F29 /* Pods-TestMysql.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMysql.release.xcconfig"; path = "Target Support Files/Pods-TestMysql/Pods-TestMysql.release.xcconfig"; sourceTree = "<group>"; };
 		E7EEA5F5199D31CFF948E18A /* Pods-TestMysql.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMysql.debug.xcconfig"; path = "Target Support Files/Pods-TestMysql/Pods-TestMysql.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 		027DB1E4222E0DE50023487B /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				027DB20C22326F760023487B /* Session */,
 				027DB20422322E720023487B /* Error */,
 				027DB1FB222FA2830023487B /* Reader */,
 				027DB1F0222E63520023487B /* Model */,
@@ -169,6 +176,16 @@
 				027DB20A223266EF0023487B /* ServerVersion.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		027DB20C22326F760023487B /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				027DB20D22326F920023487B /* ServerSession.swift */,
+				027DB20F223271580023487B /* ServerCapabilities.swift */,
+				027DB21122349CE20023487B /* TranscationState.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		8048D565E72326D00139385C /* Pods */ = {
@@ -309,8 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				027DB14B222E04D00023487B /* ViewController.swift in Sources */,
+				027DB20E22326F920023487B /* ServerSession.swift in Sources */,
 				027DB1EF222E54B70023487B /* Data.swift in Sources */,
 				027DB1F2222E63680023487B /* DataList.swift in Sources */,
+				027DB210223271580023487B /* ServerCapabilities.swift in Sources */,
+				027DB21222349CE20023487B /* TranscationState.swift in Sources */,
 				027DB1EA222E4DE90023487B /* AuthParser.swift in Sources */,
 				027DB20622322E8D0023487B /* SQLError.swift in Sources */,
 				027DB1F6222E64790023487B /* ModelProtocol.swift in Sources */,
