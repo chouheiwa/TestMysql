@@ -17,6 +17,8 @@ class ViewController: UIViewController {
 //        mySocket = MysqlSocket(host: "139.199.124.245")
 
 //        try? mySocket.connect()
+
+        print(1 << 2)
     }
 
 

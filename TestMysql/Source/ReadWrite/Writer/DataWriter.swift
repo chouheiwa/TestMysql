@@ -70,4 +70,8 @@ class DataWriter {
             data.append(0)
         }
     }
+
+    func writeData(_ writeData: Data) {
+        data.append(writeData)
+    }
 }

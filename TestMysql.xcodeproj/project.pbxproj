@@ -30,6 +30,8 @@
 		027DB2142235FC450023487B /* NativeServerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB2132235FC450023487B /* NativeServerSession.swift */; };
 		027DB2162236002E0023487B /* NativeServerSession+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB2152236002E0023487B /* NativeServerSession+State.swift */; };
 		027DB21A223627B60023487B /* DataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB219223627B60023487B /* DataWriter.swift */; };
+		027DB21C223659260023487B /* CapabilityFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB21B223659260023487B /* CapabilityFlags.swift */; };
+		027DB21E22365E480023487B /* OptionSetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB21D22365E480023487B /* OptionSetExtension.swift */; };
 		E93B8674F1E62A033E25F0DF /* Pods_TestMysql.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277809E5FB5709EABB8DE13F /* Pods_TestMysql.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		027DB2132235FC450023487B /* NativeServerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeServerSession.swift; sourceTree = "<group>"; };
 		027DB2152236002E0023487B /* NativeServerSession+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NativeServerSession+State.swift"; sourceTree = "<group>"; };
 		027DB219223627B60023487B /* DataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWriter.swift; sourceTree = "<group>"; };
+		027DB21B223659260023487B /* CapabilityFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapabilityFlags.swift; sourceTree = "<group>"; };
+		027DB21D22365E480023487B /* OptionSetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionSetExtension.swift; sourceTree = "<group>"; };
 		277809E5FB5709EABB8DE13F /* Pods_TestMysql.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMysql.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C7DAC1B9286417BF631F29 /* Pods-TestMysql.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMysql.release.xcconfig"; path = "Target Support Files/Pods-TestMysql/Pods-TestMysql.release.xcconfig"; sourceTree = "<group>"; };
 		E7EEA5F5199D31CFF948E18A /* Pods-TestMysql.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMysql.debug.xcconfig"; path = "Target Support Files/Pods-TestMysql/Pods-TestMysql.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		027DB1E4222E0DE50023487B /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				027DB21D22365E480023487B /* OptionSetExtension.swift */,
 				027DB217223627820023487B /* ReadWrite */,
 				027DB20C22326F760023487B /* Session */,
 				027DB20422322E720023487B /* Error */,
@@ -153,6 +158,7 @@
 				027DB209223266C20023487B /* Auth */,
 				027DB1F5222E64790023487B /* ModelProtocol.swift */,
 				027DB1F1222E63680023487B /* DataList.swift */,
+				027DB21B223659260023487B /* CapabilityFlags.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +359,7 @@
 				027DB2162236002E0023487B /* NativeServerSession+State.swift in Sources */,
 				027DB14B222E04D00023487B /* ViewController.swift in Sources */,
 				027DB21A223627B60023487B /* DataWriter.swift in Sources */,
+				027DB21C223659260023487B /* CapabilityFlags.swift in Sources */,
 				027DB20E22326F920023487B /* ServerSession.swift in Sources */,
 				027DB1EF222E54B70023487B /* Data.swift in Sources */,
 				027DB1F2222E63680023487B /* DataList.swift in Sources */,
@@ -370,6 +377,7 @@
 				027DB2022231FBCA0023487B /* DataType.swift in Sources */,
 				027DB2142235FC450023487B /* NativeServerSession.swift in Sources */,
 				027DB1E7222E0E310023487B /* MysqlSocket.swift in Sources */,
+				027DB21E22365E480023487B /* OptionSetExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
