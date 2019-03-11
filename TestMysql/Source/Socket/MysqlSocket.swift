@@ -15,6 +15,8 @@ class MysqlSocket {
 
     var socket: SwiftAsyncSocket
 
+    var serverSession: ServerSession?
+
     init(host: String, port: UInt16 = 3306) {
         socket = SwiftAsyncSocket(delegate: nil, delegateQueue: DispatchQueue.global())
 
@@ -44,6 +46,9 @@ extension MysqlSocket: SwiftAsyncSocketDelegate {
         let auth = try! AuthModel(list!.data)
 
         print(auth.serverVersion)
+
+        
+
     }
 }
 

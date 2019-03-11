@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestMysql/Source/Socket/MysqlSocket.swift"
-            timestampString = "573729614.535454"
+            filePath = "TestMysql/Source/Model/AuthModel.swift"
+            timestampString = "573717276.709725"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "socket(_:didRead:with:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "init(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,12 +25,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestMysql/Source/Model/AuthModel.swift"
-            timestampString = "573717276.709725"
+            filePath = "TestMysql/Source/Model/Auth/AuthModel.swift"
+            timestampString = "573976602.162062"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "init(_:)"
             landmarkType = "7">
          </BreakpointContent>

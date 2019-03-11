@@ -14,9 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        mySocket = MysqlSocket(host: "139.199.124.245")
+//        mySocket = MysqlSocket(host: "139.199.124.245")
 
-        try? mySocket.connect()
+//        try? mySocket.connect()
     }
 
 

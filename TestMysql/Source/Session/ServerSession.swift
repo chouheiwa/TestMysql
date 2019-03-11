@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 protocol ServerSession {
     var capabilities: ServerCapabilities { get set }
 
@@ -33,7 +31,33 @@ protocol ServerSession {
 
     var clientParam: Int { get set }
 
-    
+    var useMultiResults: Bool { get }
+
+    var isEOFDeprecated: Bool { get }
+
+    var hasLongColumnInfo: Bool { get set }
+
+    var serverVariables: [String: String] {get set}
+
+    func getServerVariable(name: String) -> String?
+
+    func characterSetNamesMatches(mysqlEncodingName: String) -> Bool
+
+    var serverVersion: ServerVersion { get }
+
+    var serverDefaultCharset: String { get }
+
+    var errorMessageEncoding: String.Encoding { get set }
+
+    func getMaxBytesPerChar(charsetName: String) -> Int
+
+    func getMaxBytesPerChar(charsetIndex: Int,charsetName: String) -> Int
+
+    func getEncodingForIndex(_ collationIndex: Int) -> String
+
+    func configureCharacterSets()
+
+
 }
 
 extension ServerSession {

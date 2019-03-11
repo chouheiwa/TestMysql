@@ -81,5 +81,13 @@ class AuthModel: ModelProtocol {
         reader.skip(10)
 
         serverHasFracSecsSupport = serverVersion >= ServerVersion(major: 5, minor: 6, subminor: 4)
+
+        if authPluginDataLength > 0 {
+            seed += try reader.readString(.STRING_FIXED, encoding: .ascii, length: authPluginDataLength - 8)
+        } else {
+            seed += try reader.readString(.STRING_TERM, encoding: .ascii) ?? ""
+        }
+
+        print(seed)
     }
 }
