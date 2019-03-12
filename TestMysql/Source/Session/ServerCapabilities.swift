@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ServerCapabilities {
-    var capabilityFlags: Int { get set }
-    var serverVersion: ServerSession {get set}
+    var capabilityFlags: CapabilityFlags { get set }
+    var serverVersion: ServerVersion {get set}
 }

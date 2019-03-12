@@ -8,8 +8,8 @@
 
 import Foundation
 
-class DataWriter {
-    var data: Data = Data()
+final class DataWriter {
+    private var data: Data = Data()
 
     func writeInteger(type: DataType.Integer, target: Int) {
         var length = 0
@@ -73,5 +73,9 @@ class DataWriter {
 
     func writeData(_ writeData: Data) {
         data.append(writeData)
+    }
+
+    func toData() -> Data {
+        return data
     }
 }

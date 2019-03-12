@@ -8,8 +8,6 @@
 
 import Foundation
 
-class AuthParser {
-    func parser(_ data: Data) throws -> HandShake {
-        return try HandShake(data)
-    }
+class AuthProvider {
+    
 }

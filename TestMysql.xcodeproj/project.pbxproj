@@ -11,17 +11,19 @@
 		0217B2552237466400914792 /* PacketError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B2542237466400914792 /* PacketError.swift */; };
 		0217B25922374ABC00914792 /* StatusFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B25822374ABC00914792 /* StatusFlag.swift */; };
 		0217B25B2237533400914792 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B25A2237533400914792 /* CharacterSet.swift */; };
+		0217B2602237922C00914792 /* BasicPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B25F2237922C00914792 /* BasicPacket.swift */; };
+		0217B2622237927200914792 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B2612237927200914792 /* Packet.swift */; };
 		027DB149222E04D00023487B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB148222E04D00023487B /* AppDelegate.swift */; };
 		027DB14B222E04D00023487B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB14A222E04D00023487B /* ViewController.swift */; };
 		027DB14E222E04D00023487B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027DB14C222E04D00023487B /* Main.storyboard */; };
 		027DB150222E04D10023487B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027DB14F222E04D10023487B /* Assets.xcassets */; };
 		027DB153222E04D10023487B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027DB151222E04D10023487B /* LaunchScreen.storyboard */; };
 		027DB1E7222E0E310023487B /* MysqlSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1E6222E0E310023487B /* MysqlSocket.swift */; };
-		027DB1EA222E4DE90023487B /* AuthParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1E9222E4DE90023487B /* AuthParser.swift */; };
+		027DB1EA222E4DE90023487B /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1E9222E4DE90023487B /* AuthProvider.swift */; };
 		027DB1EC222E4E420023487B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1EB222E4E420023487B /* Parser.swift */; };
 		027DB1EF222E54B70023487B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1EE222E54B70023487B /* Data.swift */; };
 		027DB1F2222E63680023487B /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F1222E63680023487B /* DataList.swift */; };
-		027DB1F4222E643D0023487B /* HandShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F3222E643C0023487B /* HandShake.swift */; };
+		027DB1F4222E643D0023487B /* ServerHandShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F3222E643C0023487B /* ServerHandShake.swift */; };
 		027DB1F6222E64790023487B /* ServerPacketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F5222E64790023487B /* ServerPacketProtocol.swift */; };
 		027DB1FD222FA2900023487B /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1FC222FA2900023487B /* DataReader.swift */; };
 		027DB2022231FBCA0023487B /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB2012231FBCA0023487B /* DataType.swift */; };
@@ -32,7 +34,6 @@
 		027DB210223271580023487B /* ServerCapabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20F223271580023487B /* ServerCapabilities.swift */; };
 		027DB21222349CE20023487B /* TranscationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB21122349CE20023487B /* TranscationState.swift */; };
 		027DB2142235FC450023487B /* NativeServerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB2132235FC450023487B /* NativeServerSession.swift */; };
-		027DB2162236002E0023487B /* NativeServerSession+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB2152236002E0023487B /* NativeServerSession+State.swift */; };
 		027DB21A223627B60023487B /* DataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB219223627B60023487B /* DataWriter.swift */; };
 		027DB21C223659260023487B /* CapabilityFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB21B223659260023487B /* CapabilityFlags.swift */; };
 		027DB21E22365E480023487B /* OptionSetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB21D22365E480023487B /* OptionSetExtension.swift */; };
@@ -44,6 +45,8 @@
 		0217B2542237466400914792 /* PacketError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketError.swift; sourceTree = "<group>"; };
 		0217B25822374ABC00914792 /* StatusFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusFlag.swift; sourceTree = "<group>"; };
 		0217B25A2237533400914792 /* CharacterSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSet.swift; sourceTree = "<group>"; };
+		0217B25F2237922C00914792 /* BasicPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPacket.swift; sourceTree = "<group>"; };
+		0217B2612237927200914792 /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
 		027DB145222E04D00023487B /* TestMysql.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMysql.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DB148222E04D00023487B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027DB14A222E04D00023487B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,11 +55,11 @@
 		027DB152222E04D10023487B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027DB154222E04D10023487B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027DB1E6222E0E310023487B /* MysqlSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MysqlSocket.swift; sourceTree = "<group>"; };
-		027DB1E9222E4DE90023487B /* AuthParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthParser.swift; sourceTree = "<group>"; };
+		027DB1E9222E4DE90023487B /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		027DB1EB222E4E420023487B /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		027DB1EE222E54B70023487B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		027DB1F1222E63680023487B /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
-		027DB1F3222E643C0023487B /* HandShake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandShake.swift; sourceTree = "<group>"; };
+		027DB1F3222E643C0023487B /* ServerHandShake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerHandShake.swift; sourceTree = "<group>"; };
 		027DB1F5222E64790023487B /* ServerPacketProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerPacketProtocol.swift; sourceTree = "<group>"; };
 		027DB1FC222FA2900023487B /* DataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
 		027DB2012231FBCA0023487B /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
@@ -67,7 +70,6 @@
 		027DB20F223271580023487B /* ServerCapabilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCapabilities.swift; sourceTree = "<group>"; };
 		027DB21122349CE20023487B /* TranscationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscationState.swift; sourceTree = "<group>"; };
 		027DB2132235FC450023487B /* NativeServerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeServerSession.swift; sourceTree = "<group>"; };
-		027DB2152236002E0023487B /* NativeServerSession+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NativeServerSession+State.swift"; sourceTree = "<group>"; };
 		027DB219223627B60023487B /* DataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWriter.swift; sourceTree = "<group>"; };
 		027DB21B223659260023487B /* CapabilityFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapabilityFlags.swift; sourceTree = "<group>"; };
 		027DB21D22365E480023487B /* OptionSetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionSetExtension.swift; sourceTree = "<group>"; };
@@ -88,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0217B25E2237920E00914792 /* Packet */ = {
+			isa = PBXGroup;
+			children = (
+				0217B2612237927200914792 /* Packet.swift */,
+				0217B25F2237922C00914792 /* BasicPacket.swift */,
+			);
+			path = Packet;
+			sourceTree = "<group>";
+		};
 		027DB13C222E04D00023487B = {
 			isa = PBXGroup;
 			children = (
@@ -127,9 +138,10 @@
 				027DB217223627820023487B /* ReadWrite */,
 				027DB20C22326F760023487B /* Session */,
 				027DB20422322E720023487B /* Error */,
+				0217B25E2237920E00914792 /* Packet */,
 				027DB1F0222E63520023487B /* ServerPacket */,
 				027DB1ED222E54A40023487B /* Extensions */,
-				027DB1E8222E4DCA0023487B /* Parser */,
+				027DB1E8222E4DCA0023487B /* Provider */,
 				027DB1E5222E0DF90023487B /* Socket */,
 			);
 			path = Source;
@@ -143,13 +155,13 @@
 			path = Socket;
 			sourceTree = "<group>";
 		};
-		027DB1E8222E4DCA0023487B /* Parser */ = {
+		027DB1E8222E4DCA0023487B /* Provider */ = {
 			isa = PBXGroup;
 			children = (
 				027DB1EB222E4E420023487B /* Parser.swift */,
-				027DB1E9222E4DE90023487B /* AuthParser.swift */,
+				027DB1E9222E4DE90023487B /* AuthProvider.swift */,
 			);
-			path = Parser;
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		027DB1ED222E54A40023487B /* Extensions */ = {
@@ -193,7 +205,7 @@
 		027DB209223266C20023487B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				027DB1F3222E643C0023487B /* HandShake.swift */,
+				027DB1F3222E643C0023487B /* ServerHandShake.swift */,
 				027DB20A223266EF0023487B /* ServerVersion.swift */,
 				0217B252223745E200914792 /* ProtocolVersion.swift */,
 			);
@@ -207,7 +219,6 @@
 				027DB20F223271580023487B /* ServerCapabilities.swift */,
 				027DB21122349CE20023487B /* TranscationState.swift */,
 				027DB2132235FC450023487B /* NativeServerSession.swift */,
-				027DB2152236002E0023487B /* NativeServerSession+State.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -368,7 +379,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				027DB2162236002E0023487B /* NativeServerSession+State.swift in Sources */,
 				027DB14B222E04D00023487B /* ViewController.swift in Sources */,
 				027DB21A223627B60023487B /* DataWriter.swift in Sources */,
 				0217B253223745E200914792 /* ProtocolVersion.swift in Sources */,
@@ -378,21 +388,23 @@
 				027DB1EF222E54B70023487B /* Data.swift in Sources */,
 				027DB1F2222E63680023487B /* DataList.swift in Sources */,
 				027DB210223271580023487B /* ServerCapabilities.swift in Sources */,
+				0217B2622237927200914792 /* Packet.swift in Sources */,
 				027DB21222349CE20023487B /* TranscationState.swift in Sources */,
-				027DB1EA222E4DE90023487B /* AuthParser.swift in Sources */,
+				027DB1EA222E4DE90023487B /* AuthProvider.swift in Sources */,
 				027DB20622322E8D0023487B /* SQLError.swift in Sources */,
 				027DB1F6222E64790023487B /* ServerPacketProtocol.swift in Sources */,
 				027DB1EC222E4E420023487B /* Parser.swift in Sources */,
 				0217B2552237466400914792 /* PacketError.swift in Sources */,
 				0217B25922374ABC00914792 /* StatusFlag.swift in Sources */,
 				027DB1FD222FA2900023487B /* DataReader.swift in Sources */,
-				027DB1F4222E643D0023487B /* HandShake.swift in Sources */,
+				027DB1F4222E643D0023487B /* ServerHandShake.swift in Sources */,
 				027DB20822325AF70023487B /* SessionState.swift in Sources */,
 				027DB149222E04D00023487B /* AppDelegate.swift in Sources */,
 				027DB20B223266EF0023487B /* ServerVersion.swift in Sources */,
 				027DB2022231FBCA0023487B /* DataType.swift in Sources */,
 				027DB2142235FC450023487B /* NativeServerSession.swift in Sources */,
 				027DB1E7222E0E310023487B /* MysqlSocket.swift in Sources */,
+				0217B2602237922C00914792 /* BasicPacket.swift in Sources */,
 				027DB21E22365E480023487B /* OptionSetExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,68 +8,36 @@
 
 import Foundation
 
-class NativeServerSession {
-//    var capabilities: ServerCapabilities
-//
-//    var oldStatusFlag: Int = 0
-//
-//    var statusFlag: Int = 0
-//
-//    var transcationState: TransactionState
-//
-//    var isCursorExists: Bool
-//
-//    var isAutocommit: Bool = true
-//
-//    var hasMoreResults: Bool
-//
-//    var isLastRowSend: Bool
-//
-//    var noGoodIndexUsed: Bool
-//
-//    var noIndexUsed: Bool
-//
-//    var queryWasSlow: Bool
-//
-//    var clientParam: Int
-//
-//    var useMultiResults: Bool
-//
-//    var isEOFDeprecated: Bool
-//
-//    var hasLongColumnInfo: Bool
-//
-//    var serverVariables: [String : String] = [:]
-//
-//    func getServerVariable(name: String) -> String? {
-//        return serverVariables[name]
-//    }
-//
-//    func characterSetNamesMatches(mysqlEncodingName: String) -> Bool {
-//        <#code#>
-//    }
-//
-//    var serverVersion: ServerVersion
-//
-//    var serverDefaultCharset: String
-//
-//    var errorMessageEncoding: String.Encoding = String.Encoding.windowsCP1252
-//
-//    func getMaxBytesPerChar(charsetName: String) -> Int {
-//        <#code#>
-//    }
-//
-//    func getMaxBytesPerChar(charsetIndex: Int, charsetName: String) -> Int {
-//        <#code#>
-//    }
-//
-//    func getEncodingForIndex(_ collationIndex: Int) -> String {
-//        <#code#>
-//    }
-//
-//    func configureCharacterSets() {
-//        <#code#>
-//    }
+final class NativeServerSession: ServerSession {
+    private var realCapabilities: ServerHandShake?
 
+    var capabilities: ServerCapabilities? {
+        get {
+            return realCapabilities
+        }
+        set {
+            guard let capabilities = newValue as? ServerHandShake else {
+                realCapabilities = nil
+                return
+            }
 
+            realCapabilities = capabilities
+        }
+    }
+
+    var statusFlag: StatusFlag = []
+
+    var transcationState: TransactionState = .notStarted
+
+    var clientParam: CapabilityFlags = []
+
+    var hasLongColumnInfo: Bool = false
+
+    var serverVariables: [String : String] = [:]
+
+    var serverVersion: ServerVersion = ServerVersion()
+
+    var serverDefaultCharset: CharacterSet = .utf8
+
+    var errorMessageEncoding: CharacterSet = .utf8
 }

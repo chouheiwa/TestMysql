@@ -14,6 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        let cfEnc = CFStringEncodings.big5
+        let nsEnc = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(cfEnc.rawValue))
+
+        print(nsEnc)
+
         mySocket = MysqlSocket(host: "127.0.0.1")
 
         try? mySocket.connect()

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataReader {
+final class DataReader {
     var currentIndex: Int = 0
     private let data: Data
 

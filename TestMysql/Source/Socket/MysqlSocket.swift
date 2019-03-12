@@ -43,12 +43,9 @@ extension MysqlSocket: SwiftAsyncSocketDelegate {
 
         let list = try! Parser().parser(data: data)
 
-        let auth = try! HandShake(list!.data)
+        let auth = try! ServerHandShake(list!.data)
 
         print(auth.serverVersion)
-
-        
-
     }
 }
 

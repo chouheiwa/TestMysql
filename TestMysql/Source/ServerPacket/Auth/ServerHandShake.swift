@@ -9,7 +9,7 @@
 import Foundation
 /// Doc Page:
 /// https://dev.mysql.com/doc/internals/en/connection-phase-packets.html#packet-Protocol::Handshake
-class HandShake: ServerPacketProtocol {
+class ServerHandShake: ServerPacketProtocol, ServerCapabilities {
     let reader: DataReader
 
     var protocolVersion: ProtocolVersion

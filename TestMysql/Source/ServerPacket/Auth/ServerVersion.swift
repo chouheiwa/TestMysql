@@ -15,6 +15,8 @@ class ServerVersion {
 
     var completeVersion: String?
 
+    init() {}
+
     init(versionString: String) {
         let list = versionString.split(separator: ".")
 

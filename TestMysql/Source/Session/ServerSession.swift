@@ -9,55 +9,71 @@
 import Foundation
 
 protocol ServerSession {
-    var capabilities: ServerCapabilities { get set }
+    var capabilities: ServerCapabilities? { get set }
 
-    var statusFlag: Int {get set}
+    var statusFlag: StatusFlag {get set}
 
     var transcationState: TransactionState { get set }
 
-    var isCursorExists: Bool { get }
-
-    var isAutocommit: Bool { get }
-
-    var hasMoreResults: Bool { get }
-
-    var isLastRowSend: Bool { get }
-
-    var noGoodIndexUsed: Bool { get }
-
-    var noIndexUsed: Bool { get }
-
-    var queryWasSlow: Bool { get }
-
-    var clientParam: Int { get set }
-
-    var useMultiResults: Bool { get }
-
-    var isEOFDeprecated: Bool { get }
+    var clientParam: CapabilityFlags { get set }
 
     var hasLongColumnInfo: Bool { get set }
 
     var serverVariables: [String: String] {get set}
 
-    func getServerVariable(name: String) -> String?
-
-    func characterSetNamesMatches(mysqlEncodingName: String) -> Bool
-
     var serverVersion: ServerVersion { get }
 
-    var serverDefaultCharset: String { get }
+    var serverDefaultCharset: CharacterSet { get }
 
-    var errorMessageEncoding: String.Encoding { get set }
+    var errorMessageEncoding: CharacterSet { get set }
+}
 
-    func getMaxBytesPerChar(charsetName: String) -> Int
+// MARK: - StatusFlag
+extension ServerSession {
+    var isCursorExists: Bool {
+        return statusFlag.contains(.SERVER_STATUS_CURSOR_EXISTS)
+    }
 
-    func getMaxBytesPerChar(charsetIndex: Int,charsetName: String) -> Int
+    var isAutocommit: Bool {
+        return statusFlag.contains(.SERVER_STATUS_AUTOCOMMIT)
+    }
 
-    func getEncodingForIndex(_ collationIndex: Int) -> String
+    var hasMoreResults: Bool {
+        return statusFlag.contains(.SERVER_MORE_RESULTS_EXISTS)
+    }
 
-    func configureCharacterSets()
+    var isLastRowSend: Bool {
+        return statusFlag.contains(.SERVER_STATUS_LAST_ROW_SENT)
+    }
 
+    var noGoodIndexUsed: Bool {
+        return statusFlag.contains(.SERVER_STATUS_NO_GOOD_INDEX_USED)
+    }
 
+    var noIndexUsed: Bool {
+        return statusFlag.contains(.SERVER_STATUS_NO_INDEX_USED)
+    }
+
+    var queryWasSlow: Bool {
+        return statusFlag.contains(.SERVER_QUERY_WAS_SLOW)
+    }
+}
+
+// MARK: - CapabilityFlags
+extension ServerSession {
+    var useMultiResults: Bool {
+        return clientParam.contains(.CLIENT_MULTI_RESULTS) || clientParam.contains(.CLIENT_PS_MULTI_RESULTS)
+    }
+
+    var isEOFDeprecated: Bool {
+        return clientParam.contains(.CLIENT_DEPRECATE_EOF)
+    }
+}
+
+extension ServerSession {
+    func getServerVariable(name: String) -> String? {
+        return serverVariables[name]
+    }
 }
 
 extension ServerSession {
