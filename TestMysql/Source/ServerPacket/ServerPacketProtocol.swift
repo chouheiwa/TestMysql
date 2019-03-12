@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ModelProtocol {
+protocol ServerPacketProtocol {
     init(_ data: Data) throws
 }

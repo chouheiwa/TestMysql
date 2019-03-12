@@ -7,10 +7,10 @@
 //
 
 import Foundation
-
-struct CapabilityFlags: RawValueProtocol {
+/// Doc Page:
+/// https://dev.mysql.com/doc/internals/en/capability-flags.html#packet-Protocol::CapabilityFlags
+struct CapabilityFlags: RawValueProtocol, OptionSet {
     var rawValue: Int
-
     /// Use the improved version of Old Password Authentication.
     /// See more in https://dev.mysql.com/doc/internals/en/old-password-authentication.html#packet-Authentication::Old
     static let CLIENT_LONG_PASSWORD     = CapabilityFlags(rawValue: 1 << 0)

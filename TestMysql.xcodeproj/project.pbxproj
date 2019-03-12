@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0217B253223745E200914792 /* ProtocolVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B252223745E200914792 /* ProtocolVersion.swift */; };
+		0217B2552237466400914792 /* PacketError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B2542237466400914792 /* PacketError.swift */; };
+		0217B25922374ABC00914792 /* StatusFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B25822374ABC00914792 /* StatusFlag.swift */; };
+		0217B25B2237533400914792 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B25A2237533400914792 /* CharacterSet.swift */; };
 		027DB149222E04D00023487B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB148222E04D00023487B /* AppDelegate.swift */; };
 		027DB14B222E04D00023487B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB14A222E04D00023487B /* ViewController.swift */; };
 		027DB14E222E04D00023487B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027DB14C222E04D00023487B /* Main.storyboard */; };
@@ -17,8 +21,8 @@
 		027DB1EC222E4E420023487B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1EB222E4E420023487B /* Parser.swift */; };
 		027DB1EF222E54B70023487B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1EE222E54B70023487B /* Data.swift */; };
 		027DB1F2222E63680023487B /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F1222E63680023487B /* DataList.swift */; };
-		027DB1F4222E643D0023487B /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F3222E643C0023487B /* AuthModel.swift */; };
-		027DB1F6222E64790023487B /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F5222E64790023487B /* ModelProtocol.swift */; };
+		027DB1F4222E643D0023487B /* HandShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F3222E643C0023487B /* HandShake.swift */; };
+		027DB1F6222E64790023487B /* ServerPacketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1F5222E64790023487B /* ServerPacketProtocol.swift */; };
 		027DB1FD222FA2900023487B /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1FC222FA2900023487B /* DataReader.swift */; };
 		027DB2022231FBCA0023487B /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB2012231FBCA0023487B /* DataType.swift */; };
 		027DB20622322E8D0023487B /* SQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20522322E8D0023487B /* SQLError.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0217B252223745E200914792 /* ProtocolVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolVersion.swift; sourceTree = "<group>"; };
+		0217B2542237466400914792 /* PacketError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketError.swift; sourceTree = "<group>"; };
+		0217B25822374ABC00914792 /* StatusFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusFlag.swift; sourceTree = "<group>"; };
+		0217B25A2237533400914792 /* CharacterSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSet.swift; sourceTree = "<group>"; };
 		027DB145222E04D00023487B /* TestMysql.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMysql.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DB148222E04D00023487B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027DB14A222E04D00023487B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,8 +56,8 @@
 		027DB1EB222E4E420023487B /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		027DB1EE222E54B70023487B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		027DB1F1222E63680023487B /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
-		027DB1F3222E643C0023487B /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
-		027DB1F5222E64790023487B /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
+		027DB1F3222E643C0023487B /* HandShake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandShake.swift; sourceTree = "<group>"; };
+		027DB1F5222E64790023487B /* ServerPacketProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerPacketProtocol.swift; sourceTree = "<group>"; };
 		027DB1FC222FA2900023487B /* DataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
 		027DB2012231FBCA0023487B /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		027DB20522322E8D0023487B /* SQLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLError.swift; sourceTree = "<group>"; };
@@ -119,7 +127,7 @@
 				027DB217223627820023487B /* ReadWrite */,
 				027DB20C22326F760023487B /* Session */,
 				027DB20422322E720023487B /* Error */,
-				027DB1F0222E63520023487B /* Model */,
+				027DB1F0222E63520023487B /* ServerPacket */,
 				027DB1ED222E54A40023487B /* Extensions */,
 				027DB1E8222E4DCA0023487B /* Parser */,
 				027DB1E5222E0DF90023487B /* Socket */,
@@ -152,15 +160,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		027DB1F0222E63520023487B /* Model */ = {
+		027DB1F0222E63520023487B /* ServerPacket */ = {
 			isa = PBXGroup;
 			children = (
 				027DB209223266C20023487B /* Auth */,
-				027DB1F5222E64790023487B /* ModelProtocol.swift */,
+				027DB1F5222E64790023487B /* ServerPacketProtocol.swift */,
 				027DB1F1222E63680023487B /* DataList.swift */,
 				027DB21B223659260023487B /* CapabilityFlags.swift */,
+				0217B25822374ABC00914792 /* StatusFlag.swift */,
+				0217B25A2237533400914792 /* CharacterSet.swift */,
 			);
-			path = Model;
+			path = ServerPacket;
 			sourceTree = "<group>";
 		};
 		027DB1FB222FA2830023487B /* Reader */ = {
@@ -175,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				027DB20522322E8D0023487B /* SQLError.swift */,
+				0217B2542237466400914792 /* PacketError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -182,8 +193,9 @@
 		027DB209223266C20023487B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				027DB1F3222E643C0023487B /* AuthModel.swift */,
+				027DB1F3222E643C0023487B /* HandShake.swift */,
 				027DB20A223266EF0023487B /* ServerVersion.swift */,
+				0217B252223745E200914792 /* ProtocolVersion.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -359,6 +371,8 @@
 				027DB2162236002E0023487B /* NativeServerSession+State.swift in Sources */,
 				027DB14B222E04D00023487B /* ViewController.swift in Sources */,
 				027DB21A223627B60023487B /* DataWriter.swift in Sources */,
+				0217B253223745E200914792 /* ProtocolVersion.swift in Sources */,
+				0217B25B2237533400914792 /* CharacterSet.swift in Sources */,
 				027DB21C223659260023487B /* CapabilityFlags.swift in Sources */,
 				027DB20E22326F920023487B /* ServerSession.swift in Sources */,
 				027DB1EF222E54B70023487B /* Data.swift in Sources */,
@@ -367,10 +381,12 @@
 				027DB21222349CE20023487B /* TranscationState.swift in Sources */,
 				027DB1EA222E4DE90023487B /* AuthParser.swift in Sources */,
 				027DB20622322E8D0023487B /* SQLError.swift in Sources */,
-				027DB1F6222E64790023487B /* ModelProtocol.swift in Sources */,
+				027DB1F6222E64790023487B /* ServerPacketProtocol.swift in Sources */,
 				027DB1EC222E4E420023487B /* Parser.swift in Sources */,
+				0217B2552237466400914792 /* PacketError.swift in Sources */,
+				0217B25922374ABC00914792 /* StatusFlag.swift in Sources */,
 				027DB1FD222FA2900023487B /* DataReader.swift in Sources */,
-				027DB1F4222E643D0023487B /* AuthModel.swift in Sources */,
+				027DB1F4222E643D0023487B /* HandShake.swift in Sources */,
 				027DB20822325AF70023487B /* SessionState.swift in Sources */,
 				027DB149222E04D00023487B /* AppDelegate.swift in Sources */,
 				027DB20B223266EF0023487B /* ServerVersion.swift in Sources */,

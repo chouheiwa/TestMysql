@@ -9,7 +9,7 @@
 import Foundation
 
 class AuthParser {
-    func parser(_ data: Data) throws -> AuthModel {
-        return try AuthModel(data)
+    func parser(_ data: Data) throws -> HandShake {
+        return try HandShake(data)
     }
 }

@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 class Parser {
     func parser(data: Data) throws -> DataList? {
         let reader = DataReader(data)

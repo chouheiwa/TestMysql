@@ -14,11 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-//        mySocket = MysqlSocket(host: "139.199.124.245")
+        mySocket = MysqlSocket(host: "127.0.0.1")
 
-//        try? mySocket.connect()
+        try? mySocket.connect()
 
-        print(1 << 2)
+//        print(1 << 2)
     }
 
 
