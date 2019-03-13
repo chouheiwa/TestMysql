@@ -13,6 +13,11 @@
 		0217B25B2237533400914792 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B25A2237533400914792 /* CharacterSet.swift */; };
 		0217B2602237922C00914792 /* BasicPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B25F2237922C00914792 /* BasicPacket.swift */; };
 		0217B2622237927200914792 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B2612237927200914792 /* Packet.swift */; };
+		0217B2652237A8A500914792 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B2642237A8A500914792 /* AuthPlugin.swift */; };
+		0217B26722389B7A00914792 /* AuthPluginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B26622389B7A00914792 /* AuthPluginFactory.swift */; };
+		0217B2692238A6FB00914792 /* Sha256PasswordPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B2682238A6FB00914792 /* Sha256PasswordPlugin.swift */; };
+		0217B26B2238C74E00914792 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B26A2238C74E00914792 /* Socket.swift */; };
+		0217B26D2238D77400914792 /* CachingSha2PasswordPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B26C2238D77400914792 /* CachingSha2PasswordPlugin.swift */; };
 		027DB149222E04D00023487B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB148222E04D00023487B /* AppDelegate.swift */; };
 		027DB14B222E04D00023487B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB14A222E04D00023487B /* ViewController.swift */; };
 		027DB14E222E04D00023487B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027DB14C222E04D00023487B /* Main.storyboard */; };
@@ -28,7 +33,6 @@
 		027DB1FD222FA2900023487B /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB1FC222FA2900023487B /* DataReader.swift */; };
 		027DB2022231FBCA0023487B /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB2012231FBCA0023487B /* DataType.swift */; };
 		027DB20622322E8D0023487B /* SQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20522322E8D0023487B /* SQLError.swift */; };
-		027DB20822325AF70023487B /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20722325AF70023487B /* SessionState.swift */; };
 		027DB20B223266EF0023487B /* ServerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20A223266EF0023487B /* ServerVersion.swift */; };
 		027DB20E22326F920023487B /* ServerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20D22326F920023487B /* ServerSession.swift */; };
 		027DB210223271580023487B /* ServerCapabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB20F223271580023487B /* ServerCapabilities.swift */; };
@@ -47,6 +51,11 @@
 		0217B25A2237533400914792 /* CharacterSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSet.swift; sourceTree = "<group>"; };
 		0217B25F2237922C00914792 /* BasicPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPacket.swift; sourceTree = "<group>"; };
 		0217B2612237927200914792 /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
+		0217B2642237A8A500914792 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
+		0217B26622389B7A00914792 /* AuthPluginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPluginFactory.swift; sourceTree = "<group>"; };
+		0217B2682238A6FB00914792 /* Sha256PasswordPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha256PasswordPlugin.swift; sourceTree = "<group>"; };
+		0217B26A2238C74E00914792 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		0217B26C2238D77400914792 /* CachingSha2PasswordPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingSha2PasswordPlugin.swift; sourceTree = "<group>"; };
 		027DB145222E04D00023487B /* TestMysql.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMysql.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DB148222E04D00023487B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027DB14A222E04D00023487B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +73,6 @@
 		027DB1FC222FA2900023487B /* DataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
 		027DB2012231FBCA0023487B /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		027DB20522322E8D0023487B /* SQLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLError.swift; sourceTree = "<group>"; };
-		027DB20722325AF70023487B /* SessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionState.swift; sourceTree = "<group>"; };
 		027DB20A223266EF0023487B /* ServerVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerVersion.swift; sourceTree = "<group>"; };
 		027DB20D22326F920023487B /* ServerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSession.swift; sourceTree = "<group>"; };
 		027DB20F223271580023487B /* ServerCapabilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCapabilities.swift; sourceTree = "<group>"; };
@@ -97,6 +105,17 @@
 				0217B25F2237922C00914792 /* BasicPacket.swift */,
 			);
 			path = Packet;
+			sourceTree = "<group>";
+		};
+		0217B2632237A89500914792 /* AuthPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				0217B26622389B7A00914792 /* AuthPluginFactory.swift */,
+				0217B2642237A8A500914792 /* AuthPlugin.swift */,
+				0217B2682238A6FB00914792 /* Sha256PasswordPlugin.swift */,
+				0217B26C2238D77400914792 /* CachingSha2PasswordPlugin.swift */,
+			);
+			path = AuthPlugin;
 			sourceTree = "<group>";
 		};
 		027DB13C222E04D00023487B = {
@@ -150,6 +169,7 @@
 		027DB1E5222E0DF90023487B /* Socket */ = {
 			isa = PBXGroup;
 			children = (
+				0217B26A2238C74E00914792 /* Socket.swift */,
 				027DB1E6222E0E310023487B /* MysqlSocket.swift */,
 			);
 			path = Socket;
@@ -158,6 +178,7 @@
 		027DB1E8222E4DCA0023487B /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				0217B2632237A89500914792 /* AuthPlugin */,
 				027DB1EB222E4E420023487B /* Parser.swift */,
 				027DB1E9222E4DE90023487B /* AuthProvider.swift */,
 			);
@@ -226,7 +247,6 @@
 		027DB217223627820023487B /* ReadWrite */ = {
 			isa = PBXGroup;
 			children = (
-				027DB20722325AF70023487B /* SessionState.swift */,
 				027DB2012231FBCA0023487B /* DataType.swift */,
 				027DB218223627900023487B /* Writer */,
 				027DB1FB222FA2830023487B /* Reader */,
@@ -381,6 +401,8 @@
 			files = (
 				027DB14B222E04D00023487B /* ViewController.swift in Sources */,
 				027DB21A223627B60023487B /* DataWriter.swift in Sources */,
+				0217B26B2238C74E00914792 /* Socket.swift in Sources */,
+				0217B2692238A6FB00914792 /* Sha256PasswordPlugin.swift in Sources */,
 				0217B253223745E200914792 /* ProtocolVersion.swift in Sources */,
 				0217B25B2237533400914792 /* CharacterSet.swift in Sources */,
 				027DB21C223659260023487B /* CapabilityFlags.swift in Sources */,
@@ -398,13 +420,15 @@
 				0217B25922374ABC00914792 /* StatusFlag.swift in Sources */,
 				027DB1FD222FA2900023487B /* DataReader.swift in Sources */,
 				027DB1F4222E643D0023487B /* ServerHandShake.swift in Sources */,
-				027DB20822325AF70023487B /* SessionState.swift in Sources */,
 				027DB149222E04D00023487B /* AppDelegate.swift in Sources */,
+				0217B2652237A8A500914792 /* AuthPlugin.swift in Sources */,
 				027DB20B223266EF0023487B /* ServerVersion.swift in Sources */,
 				027DB2022231FBCA0023487B /* DataType.swift in Sources */,
+				0217B26722389B7A00914792 /* AuthPluginFactory.swift in Sources */,
 				027DB2142235FC450023487B /* NativeServerSession.swift in Sources */,
 				027DB1E7222E0E310023487B /* MysqlSocket.swift in Sources */,
 				0217B2602237922C00914792 /* BasicPacket.swift in Sources */,
+				0217B26D2238D77400914792 /* CachingSha2PasswordPlugin.swift in Sources */,
 				027DB21E22365E480023487B /* OptionSetExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

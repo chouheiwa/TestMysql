@@ -9,13 +9,17 @@
 import Foundation
 import SwiftAsyncSocket
 
-class MysqlSocket {
+class MysqlSocket: Socket {
     var host: String
     var port: UInt16
 
     var socket: SwiftAsyncSocket
 
-    var serverSession: ServerSession?
+    var isSSLEstablish: Bool {
+        return socket.isSecure
+    }
+
+    weak var serverSession: ServerSession?
 
     init(host: String, port: UInt16 = 3306) {
         socket = SwiftAsyncSocket(delegate: nil, delegateQueue: DispatchQueue.global())

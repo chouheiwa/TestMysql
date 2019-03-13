@@ -74,6 +74,17 @@ final class DataReader {
     }
 
     func readString(_ type: DataType.String, encoding: String.Encoding) throws -> String? {
+        guard let data = try readStringData(type) else { return nil }
+
+        return String(data: data, encoding: encoding) ?? ""
+    }
+
+    func readString(_ lengthType: DataType.StringLength,
+                    encoding: String.Encoding, length: Int) throws -> String {
+        return String(data: try readStringData(lengthType, length: length), encoding: encoding) ?? ""
+    }
+
+    func readStringData(_ type: DataType.String) throws -> Data? {
         switch type {
         case .STRING_TERM:
             var length = 0
@@ -81,25 +92,25 @@ final class DataReader {
                 data[currentIndex + length] != 0{
                     length += 1
             }
-            let string = try readString(.STRING_FIXED, encoding: encoding, length: length)
+            let dataResult = try readStringData(.STRING_FIXED, length: length)
 
             currentIndex += 1
 
-            return string
+            return dataResult
         case .STRING_LENENC:
             let length = readInt(.INT_LENENC)
             return length == -1 ? nil :
-                (length == 0 ? "" : try readString(.STRING_FIXED, encoding: encoding, length: length))
+                (length == 0 ? Data() : try readStringData(.STRING_FIXED, length: length))
         case .STRING_EOF:
-            return try readString(.STRING_FIXED, encoding: encoding, length: data.count - currentIndex)
+            return try readStringData(.STRING_FIXED, length: data.count - currentIndex)
         }
     }
 
-    func readString(_ lengthType: DataType.StringLength,
-                            encoding: String.Encoding, length: Int) throws -> String {
+    func readStringData(_ lengthType: DataType.StringLength,
+                        length: Int) throws -> Data {
         switch lengthType {
         case .STRING_FIXED,.STRING_VAR:
-            return String(data: try readNext(length), encoding: encoding) ?? ""
+            return try readNext(length)
         }
     }
 

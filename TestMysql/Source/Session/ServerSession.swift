@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ServerSession {
+protocol ServerSession: class {
     var capabilities: ServerCapabilities? { get set }
 
     var statusFlag: StatusFlag {get set}
@@ -26,6 +26,8 @@ protocol ServerSession {
     var serverDefaultCharset: CharacterSet { get }
 
     var errorMessageEncoding: CharacterSet { get set }
+
+    var connectedSocket: MysqlSocket { get set }
 }
 
 // MARK: - StatusFlag

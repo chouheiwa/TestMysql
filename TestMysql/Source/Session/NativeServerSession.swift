@@ -9,6 +9,8 @@
 import Foundation
 
 final class NativeServerSession: ServerSession {
+    var connectedSocket: MysqlSocket
+
     private var realCapabilities: ServerHandShake?
 
     var capabilities: ServerCapabilities? {
@@ -40,4 +42,8 @@ final class NativeServerSession: ServerSession {
     var serverDefaultCharset: CharacterSet = .utf8
 
     var errorMessageEncoding: CharacterSet = .utf8
+
+    init(socket: MysqlSocket) {
+        self.connectedSocket = socket
+    }
 }
