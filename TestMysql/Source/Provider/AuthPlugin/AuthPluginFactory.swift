@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+
+class AuthPluginFactory {
+    static var plugin: [String: AuthPlugin.Type] = [:]
+
+    func add()  {
+        AuthPluginFactory.plugin[MysqlNativePasswordPlugin.pluginName] = MysqlNativePasswordPlugin.self
+    }
+}

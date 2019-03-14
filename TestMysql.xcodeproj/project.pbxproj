@@ -19,6 +19,7 @@
 		0217B26B2238C74E00914792 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B26A2238C74E00914792 /* Socket.swift */; };
 		0217B26D2238D77400914792 /* CachingSha2PasswordPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B26C2238D77400914792 /* CachingSha2PasswordPlugin.swift */; };
 		0217B276223A19B600914792 /* RSAProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B275223A19B600914792 /* RSAProvider.swift */; };
+		0217B278223A2CCA00914792 /* MysqlNativePasswordPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217B277223A2CCA00914792 /* MysqlNativePasswordPlugin.swift */; };
 		027DB149222E04D00023487B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB148222E04D00023487B /* AppDelegate.swift */; };
 		027DB14B222E04D00023487B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DB14A222E04D00023487B /* ViewController.swift */; };
 		027DB14E222E04D00023487B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027DB14C222E04D00023487B /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		0217B26A2238C74E00914792 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 		0217B26C2238D77400914792 /* CachingSha2PasswordPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingSha2PasswordPlugin.swift; sourceTree = "<group>"; };
 		0217B275223A19B600914792 /* RSAProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAProvider.swift; sourceTree = "<group>"; };
+		0217B277223A2CCA00914792 /* MysqlNativePasswordPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MysqlNativePasswordPlugin.swift; sourceTree = "<group>"; };
 		027DB145222E04D00023487B /* TestMysql.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMysql.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DB148222E04D00023487B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027DB14A222E04D00023487B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				0217B274223A19A200914792 /* RSA */,
 				0217B26622389B7A00914792 /* AuthPluginFactory.swift */,
 				0217B2642237A8A500914792 /* AuthPlugin.swift */,
+				0217B277223A2CCA00914792 /* MysqlNativePasswordPlugin.swift */,
 				0217B2682238A6FB00914792 /* Sha256PasswordPlugin.swift */,
 				0217B26C2238D77400914792 /* CachingSha2PasswordPlugin.swift */,
 			);
@@ -368,6 +371,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TestMysql/Pods-TestMysql-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftAsyncSocket/SwiftAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework",
 			);
@@ -375,6 +379,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyRSA.framework",
 			);
@@ -441,6 +446,7 @@
 				027DB2142235FC450023487B /* NativeServerSession.swift in Sources */,
 				027DB1E7222E0E310023487B /* MysqlSocket.swift in Sources */,
 				0217B2602237922C00914792 /* BasicPacket.swift in Sources */,
+				0217B278223A2CCA00914792 /* MysqlNativePasswordPlugin.swift in Sources */,
 				0217B276223A19B600914792 /* RSAProvider.swift in Sources */,
 				0217B26D2238D77400914792 /* CachingSha2PasswordPlugin.swift in Sources */,
 				027DB21E22365E480023487B /* OptionSetExtension.swift in Sources */,
@@ -593,6 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UNAYZPR4S;
 				INFOPLIST_FILE = TestMysql/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,6 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UNAYZPR4S;
 				INFOPLIST_FILE = TestMysql/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

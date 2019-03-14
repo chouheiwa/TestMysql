@@ -9,7 +9,14 @@
 import Foundation
 
 final class DataReader {
-    var currentIndex: Int = 0
+    enum PacketType: UInt8 {
+        case Error = 0xFF
+        case EOF_AuthSwitch = 0xFE
+        case LocalInFile = 0xFB
+        case OK = 0
+    }
+
+    private var position: Int = 0
     private let data: Data
 
     init(_ data: Data) {
@@ -17,18 +24,32 @@ final class DataReader {
     }
 
     @discardableResult func readNext(_ count: Int) throws -> Data {
-        guard data.count >= count + currentIndex && count > 0 else {
+        guard data.count >= count + position && count > 0 else {
             throw SQLError.dataLengthError
         }
 
-        let index = currentIndex
-        currentIndex += count
+        let index = position
+        position += count
 
-        return data.subdata(in: index..<currentIndex)
+        return data.subdata(in: index..<position)
     }
 
-    func skip(_ count: Int) -> Void {
-        currentIndex += count
+    func skip(_ count: Int) {
+        guard data.count >= count + position && count > 0 else {
+            position = data.count
+            return
+        }
+
+        position += count
+    }
+
+    func changePosition(_ position: Int) {
+        guard position <= data.count else {
+            self.position = data.count
+            return
+        }
+
+        self.position = position
     }
 
     func readInt(_ type: DataType.Integer) -> Int {
@@ -47,8 +68,8 @@ final class DataReader {
         case .INT8:
             length = 8
         case .INT_LENENC:
-            let sw = data[currentIndex] & 0xff
-            currentIndex += 1
+            let sw = data[position] & 0xff
+            position += 1
             switch sw {
             case 251:
                 return -1
@@ -65,10 +86,10 @@ final class DataReader {
 
         var result = 0
         for index in 0..<length {
-            result += Int(data[currentIndex + index] & 0xff) << (index * 8)
+            result += Int(data[position + index] & 0xff) << (index * 8)
         }
 
-        currentIndex += length
+        position += length
 
         return result
     }
@@ -88,13 +109,13 @@ final class DataReader {
         switch type {
         case .STRING_TERM:
             var length = 0
-            while currentIndex + length < data.count &&
-                data[currentIndex + length] != 0{
+            while position + length < data.count &&
+                data[position + length] != 0{
                     length += 1
             }
             let dataResult = try readStringData(.STRING_FIXED, length: length)
 
-            currentIndex += 1
+            position += 1
 
             return dataResult
         case .STRING_LENENC:
@@ -102,7 +123,7 @@ final class DataReader {
             return length == -1 ? nil :
                 (length == 0 ? Data() : try readStringData(.STRING_FIXED, length: length))
         case .STRING_EOF:
-            return try readStringData(.STRING_FIXED, length: data.count - currentIndex)
+            return try readStringData(.STRING_FIXED, length: data.count - position)
         }
     }
 
@@ -115,14 +136,23 @@ final class DataReader {
     }
 
     func surplusData() -> Data {
-        return data.suffix(from: currentIndex)
+        return data.suffix(from: position)
     }
 
     func isEmpty() -> Bool {
-        return currentIndex == data.count
+        return position == data.count
     }
 
     func canReadCount() -> Int {
-        return data.count - currentIndex
+        return data.count - position
+    }
+}
+
+extension DataReader {
+    var isOKPacket: Bool {
+        guard data.count > 0 else {
+            return false
+        }
+        return PacketType(rawValue: data[0]) == PacketType.OK
     }
 }

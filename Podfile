@@ -8,4 +8,5 @@ target 'TestMysql' do
   # Pods for TestMysql
   pod 'SwiftAsyncSocket'
   pod 'SwiftyRSA'
+  pod 'CryptoSwift'
 end
