@@ -9,7 +9,7 @@
 import Foundation
 
 protocol AuthPlugin: class {
-    class var pluginName: String { get }
+    static var pluginName: String { get }
 
     init(socket: Socket)
     /// Does this plugin require the connection itself to be confidential

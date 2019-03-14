@@ -60,4 +60,8 @@ class Sha256PasswordPlugin: AuthPlugin {
 
         return []
     }
+
+//    func encryptPassword() -> Data {
+//        
+//    }
 }
