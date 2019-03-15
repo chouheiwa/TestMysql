@@ -10,4 +10,6 @@ import Foundation
 
 protocol Socket {
     var isSSLEstablish: Bool { get }
+
+    func startSSL()
 }

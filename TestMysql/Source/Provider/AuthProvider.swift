@@ -9,7 +9,7 @@
 import Foundation
 
 class AuthProvider {
-    var seed: String?
+    var seed: Data?
 
     var useConnectWithDb = false
 
@@ -52,7 +52,35 @@ class AuthProvider {
         if flags.contains(.CLIENT_PLUGIN_AUTH) {
             sessionState.clientParam = clientParam
         }
+
+        guard flags.contains(.CLIENT_PLUGIN_AUTH) else {
+            #warning ("Next Step Here")
+            /// 这里需要抛出对应错误
+            return
+        }
+
+        sessionState.clientParam = clientParam
+
+        if capabilities.capabilityFlags.contains(.CLIENT_SSL) {
+            sessionState.connectedSocket.startSSL()
+        }
+
+        processHandShake(sessionState, user: user, password: password, dataBase: dataBase)
+
     }
 
-    
+    func processHandShake(_ sessionState: ServerSession, user: String, password: String, dataBase: String) {
+        guard let capabilities = sessionState.capabilities else { return }
+
+        var skipPassword = false
+
+        var passwordLength = 16
+
+        var userLength = user.count
+
+        var dataBaseLength = dataBase.count
+
+        
+
+    }
 }

@@ -11,7 +11,9 @@ import Foundation
 protocol AuthPlugin: class {
     static var pluginName: String { get }
 
-    init(socket: Socket)
+    var socket: Socket? { set get }
+
+    init()
     /// Does this plugin require the connection itself to be confidential
     func requiresConfidentiality() -> Bool
 
@@ -22,4 +24,10 @@ protocol AuthPlugin: class {
     func setAuthenticationParameters(user: String, password: String)
 
     func nextAuthenticationStep(fromServer: DataReader?) throws -> [Data]
+}
+
+extension AuthPlugin {
+    var pluginName: String {
+        return Self.pluginName
+    }
 }

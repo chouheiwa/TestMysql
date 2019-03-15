@@ -10,6 +10,7 @@ import Foundation
 import SwiftAsyncSocket
 
 class MysqlSocket: Socket {
+
     var host: String
     var port: UInt16
 
@@ -32,6 +33,10 @@ class MysqlSocket: Socket {
 
     func connect() throws -> Void {
         try socket.connect(toHost: host, onPort: port)
+    }
+
+    func startSSL() {
+        socket.startTLS()
     }
 
 }

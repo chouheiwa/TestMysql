@@ -18,7 +18,7 @@ class ServerHandShake: ServerPacketProtocol, ServerCapabilities {
 
     var serverPID: Int
 
-    var seed: String
+    var seed: Data
 
     var serverDefaultCollationIndex: Int
 
@@ -44,7 +44,7 @@ class ServerHandShake: ServerPacketProtocol, ServerCapabilities {
 
         serverPID = reader.readInt(.INT4)
 
-        seed = try reader.readString(.STRING_FIXED, encoding: .ascii, length: 8)
+        seed = try reader.readStringData(.STRING_FIXED, length: 8)
 
         reader.skip(1)
 
@@ -74,7 +74,7 @@ class ServerHandShake: ServerPacketProtocol, ServerCapabilities {
         if capabilityFlags.contains(.CLIENT_SECURE_CONNECTION) {
             let length = max(13, authPluginDataLength - 8)
 
-            seed += try reader.readString(.STRING_FIXED, encoding: .ascii, length: length)
+            seed += try reader.readStringData(.STRING_FIXED, length: length)
         }
 
         if capabilityFlags.contains(.CLIENT_PLUGIN_AUTH) {

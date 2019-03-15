@@ -18,11 +18,9 @@ class Sha256PasswordPlugin: AuthPlugin {
 
     var publicKey: String?
 
-    var socket: Socket
+    var socket: Socket?
 
-    required init(socket: Socket) {
-        self.socket = socket
-    }
+    required init() {}
 
     func requiresConfidentiality() -> Bool {
         return false
@@ -49,13 +47,6 @@ class Sha256PasswordPlugin: AuthPlugin {
             data.append(0)
 
             return [data]
-        }
-
-        if socket.isSSLEstablish {
-            /// allow plain text over SSL
-
-
-
         }
 
         return []

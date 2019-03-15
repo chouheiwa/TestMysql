@@ -10,11 +10,13 @@ import Foundation
 import CryptoSwift
 
 class MysqlNativePasswordPlugin: AuthPlugin {
+    var socket: Socket?
+
     static var pluginName: String = "mysql_native_password"
 
     var password: String?
 
-    required init(socket: Socket) {}
+    required init() {}
 
     func requiresConfidentiality() -> Bool {
         return false
