@@ -10,6 +10,7 @@ import Foundation
 import SwiftAsyncSocket
 
 class MysqlSocket: Socket {
+    var authProvider: AuthProvider 
 
     var host: String
     var port: UInt16

@@ -9,6 +9,8 @@
 import Foundation
 
 protocol Socket {
+    var authProvider: AuthProvider { get set }
+
     var isSSLEstablish: Bool { get }
 
     func startSSL()
