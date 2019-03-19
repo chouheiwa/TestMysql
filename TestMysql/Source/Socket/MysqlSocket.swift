@@ -10,7 +10,16 @@ import Foundation
 import SwiftAsyncSocket
 
 class MysqlSocket: Socket {
-    var authProvider: AuthProvider 
+    var currentUser: String = ""
+
+    var currentPassword: String = ""
+
+    var currentDataBase: String = ""
+
+    typealias HandShakeBlock = (ServerHandShake) -> Void
+    var handShakeBlock: HandShakeBlock?
+
+    private var authProvider: AuthProvider!
 
     var host: String
     var port: UInt16
@@ -21,7 +30,7 @@ class MysqlSocket: Socket {
         return socket.isSecure
     }
 
-    weak var serverSession: ServerSession?
+    private var serverSession: ServerSession!
 
     init(host: String, port: UInt16 = 3306) {
         socket = SwiftAsyncSocket(delegate: nil, delegateQueue: DispatchQueue.global())
@@ -30,9 +39,13 @@ class MysqlSocket: Socket {
         self.port = port
 
         socket.delegate = self
+
+        authProvider = ProviderFactory.makeAuthProvider(self)
+
+        serverSession = NativeServerSession(socket: self)
     }
 
-    func connect() throws -> Void {
+    func connect() throws {
         try socket.connect(toHost: host, onPort: port)
     }
 
@@ -40,6 +53,13 @@ class MysqlSocket: Socket {
         socket.startTLS()
     }
 
+    func initialHandShakeReceive(_ block: @escaping ((ServerHandShake) -> Void)) {
+        self.handShakeBlock = block
+    }
+
+    func needAuthority() {
+        
+    }
 }
 
 extension MysqlSocket: SwiftAsyncSocketDelegate {

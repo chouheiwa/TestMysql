@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AuthProvider: class {
-    
+    init(_ socket: Socket)
 }

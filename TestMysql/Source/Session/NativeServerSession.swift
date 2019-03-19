@@ -9,7 +9,7 @@
 import Foundation
 
 final class NativeServerSession: ServerSession {
-    var connectedSocket: MysqlSocket
+    weak var connectedSocket: Socket!
 
     private var realCapabilities: ServerHandShake?
 
@@ -43,7 +43,11 @@ final class NativeServerSession: ServerSession {
 
     var errorMessageEncoding: CharacterSet = .utf8
 
-    init(socket: MysqlSocket) {
+    init(socket: Socket) {
         self.connectedSocket = socket
+
+        socket.initialHandShakeReceive { [unowned self] (handShake) in
+            self.capabilities = handShake
+        }
     }
 }

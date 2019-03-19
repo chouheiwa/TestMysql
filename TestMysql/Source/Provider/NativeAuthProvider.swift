@@ -9,9 +9,17 @@
 import Foundation
 
 class NativeAuthProvider: AuthProvider {
+    static let AUTH_411_OVERHEAD = 33
+
     var seed: Data?
 
     var useConnectWithDb = false
+
+    weak var socket: Socket!  
+
+    required init(_ socket: Socket) {
+        self.socket = socket
+    }
 
     func connect(_ sessionState: ServerSession, user: String, password: String, dataBase: String) {
         guard let capabilities = sessionState.capabilities as? ServerHandShake else { return }

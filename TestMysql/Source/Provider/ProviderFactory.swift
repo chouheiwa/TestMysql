@@ -9,7 +9,8 @@
 import Foundation
 
 final class ProviderFactory {
-    static func makeAuthProvider() -> AuthProvider {
-        return NativeAuthProvider()
+
+    static func makeAuthProvider(_ socket: Socket) -> AuthProvider {
+        return NativeAuthProvider(socket)
     }
 }
